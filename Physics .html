@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applied Physics — 30-Day Roadmap</title>
+<style>
+/* ========== BASIC STYLES ========== */
+:root {
+  --bg:#0a0e23; --bg2:#0f1430; --text:#eaf0ff; --muted:#9fb0ff;
+  --card:#10183a; --primary:#7aa2ff; --accent:#33ffc7;
+  --shadow:0 18px 50px rgba(10,18,60,.45);
+}
+body {
+  margin:0; font-family:sans-serif; background:var(--bg);
+  color:var(--text); line-height:1.6; letter-spacing:.2px;
+}
+a {color:inherit;text-decoration:none}
+.container {width:min(92%,1100px);margin:auto}
+h1,h2 {margin:0 0 10px}
+button {cursor:pointer}
+
+/* ========== NAV ========== */
+nav {
+  position:sticky; top:0; z-index:50;
+  background:rgba(10,14,35,.85); backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+nav .inner {
+  display:flex;justify-content:space-between;align-items:center;
+  height:60px;
+}
+nav .links a {margin:0 6px;padding:6px 10px;border-radius:8px;color:var(--muted)}
+nav .links a:hover {background:rgba(255,255,255,.1);color:var(--text)}
+.btn {
+  padding:8px 14px;border-radius:8px;background:var(--primary);color:#fff;
+  border:none;font-weight:bold;
+}
+.btn:hover {opacity:0.9}
+
+/* ========== HERO ========== */
+.hero {
+  display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;
+  padding:60px 0;
+}
+.hero img {
+  width:100%;border-radius:14px;box-shadow:var(--shadow);
+}
+.hero p {color:var(--muted)}
+
+/* ========== PLAN ========== */
+section {padding:40px 0}
+.plan-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.plan {
+  background:var(--card);padding:16px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.plan h3 {margin:0 0 10px;color:var(--accent)}
+.plan ul {padding-left:18px;margin:0}
+
+/* ========== ROUTINE ========== */
+.routine-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.routine {
+  background:var(--card);padding:16px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* ========== TRACKER ========== */
+.tracker-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.day {
+  background:var(--card);padding:10px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.task {display:flex;align-items:center;gap:6px}
+.task input {width:18px;height:18px}
+
+/* ========== FOOTER ========== */
+footer {text-align:center;padding:20px 0;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="inner container">
+    <div style="font-weight:bold">Physics Roadmap</div>
+    <div class="links">
+      <a href="#plan">Plan</a>
+      <a href="#routine">Routine</a>
+      <a href="#tracker">Tracker</a>
+    </div>
+    <button class="btn" onclick="resetProgress()">Reset</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero container">
+  <div>
+    <h1>Finish Applied Physics in 30 Days</h1>
+    <p>Custom roadmap based on your PTU timetable — study smarter, stay motivated, and finish the syllabus in one month.</p>
+    <button class="btn" onclick="window.location='#plan'">View Plan</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Motivation">
+</header>
+
+<!-- PLAN -->
+<section id="plan" class="container">
+  <h2>4-Week Roadmap</h2>
+  <div class="plan-grid">
+    <div class="plan">
+      <h3>Week 1 — Mechanics</h3>
+      <ul>
+        <li>Vectors, motion in 2D/3D</li>
+        <li>Work–energy–power</li>
+        <li>Simple harmonic motion</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Week 2 — Waves & EM</h3>
+      <ul>
+        <li>Wave equation, superposition</li>
+        <li>Electrostatics & magnetostatics</li>
+        <li>Maxwell’s equations basics</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Week 3 — Optics</h3>
+      <ul>
+        <li>Interference & diffraction</li>
+        <li>Lasers & fiber optics</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Week 4 — Quantum & Revision</h3>
+      <ul>
+        <li>Photoelectric effect, Bohr model</li>
+        <li>Band theory, semiconductors</li>
+        <li>Full revision & PYQs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTINE -->
+<section id="routine" class="container">
+  <h2>Daily Routine</h2>
+  <div class="routine-grid">
+    <div class="routine">
+      <h3>6:00–6:25 AM</h3>
+      <p>Quick formula review before shower</p>
+    </div>
+    <div class="routine">
+      <h3>Commute/Breaks</h3>
+      <p>Short MCQ quizzes</p>
+    </div>
+    <div class="routine">
+      <h3>8:30–10:00 PM</h3>
+      <p>Deep study session (problems & derivations)</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKER -->
+<section id="tracker" class="container">
+  <h2>Daily Tracker</h2>
+  <div class="tracker-grid" id="trackerGrid"></div>
+</section>
+
+<footer>
+  &copy; 2025 Physics Roadmap — Stay consistent, you’ll win.
+</footer>
+
+<script>
+const trackerGrid=document.getElementById('trackerGrid');
+let progress=JSON.parse(localStorage.getItem('physicsProgress')||'{}');
+for(let day=1;day<=30;day++){
+  const div=document.createElement('div');
+  div.className='day';
+  div.innerHTML=`<h4>Day ${day}</h4>
+    <div class="task"><input type="checkbox" data-day="${day}" ${progress[day]?'checked':''}> Study Done</div>`;
+  trackerGrid.appendChild(div);
+}
+trackerGrid.addEventListener('change',e=>{
+  if(e.target.matches('input[type=checkbox]')){
+    progress[e.target.dataset.day]=e.target.checked;
+    localStorage.setItem('physicsProgress',JSON.stringify(progress));
+  }
+});
+function resetProgress(){
+  if(confirm('Reset all progress?')){
+    localStorage.removeItem('physicsProgress');
+    location.reload();
+  }
+}
+</script>
+</body>
+</html>
